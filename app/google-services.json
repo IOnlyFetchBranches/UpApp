@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "622968708473",
+    "firebase_url": "https://upapp-ee14d.firebaseio.com",
+    "project_id": "upapp-ee14d",
+    "storage_bucket": "upapp-ee14d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:622968708473:android:9b117e5037071e89",
+        "android_client_info": {
+          "package_name": "com.lunalevel.up"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "622968708473-17i4skg9mu17g65niq1e6cp0496s82re.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lunalevel.up",
+            "certificate_hash": "198ee56f90ca76835586062bac626dd5422bb93e"
+          }
+        },
+        {
+          "client_id": "622968708473-d8e11m0h65l3h1qusabj1s1m8okacgjh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhp3HTYa-CqFNO0yfkFQvxNM03E2oGEhw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "622968708473-d8e11m0h65l3h1qusabj1s1m8okacgjh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

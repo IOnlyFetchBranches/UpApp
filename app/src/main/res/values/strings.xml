@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Up</string>
+
+    <!-- Strings related to prompts -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_username">Username</string>
+
+
+    <!--- Message Strings -->
+    <string name="message_welcome">Welcome!</string>
+    <string name="message_permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+
+    <!---Labels -->
+    <string name="label_user_home">Welcome to your home page!</string>
+    <string name="label_copyright">LunaLevel 2017</string>
+    <string name="action_sign_in_long">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+
+
+    <!--Error Messages-->
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="label_user_settings">Settings</string>
+
+</resources>

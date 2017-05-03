@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "622968708473-o0os4sq3episb4dbudr6a7u43361p4gp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lunalevel.up",
+            "certificate_hash": "24256430d5b652fc0a1cbf08c6abe2958615e3bf"
+          }
+        },
+        {
           "client_id": "622968708473-17i4skg9mu17g65niq1e6cp0496s82re.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

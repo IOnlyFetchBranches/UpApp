@@ -24,7 +24,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activities.SettingsActivity" />
-        <activity android:name=".Activities.HomeScreenActivity"></activity>
+        <activity android:name=".Activities.HomeScreenActivity" />
+        <activity android:name=".Activities.ProfileCreateActivity" />
+        <activity android:name=".Models.Fragments.welcomeFragment" />
+        <activity android:name=".Models.Fragments.welcomeInfoAddFragment" />
+        <activity android:name=".Activities.NewUserActivity"></activity>
     </application>
 
 </manifest>

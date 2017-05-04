@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--- Many thanks to stack overflow user Janek Bogucki for the base of this xml :)-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+    <stroke
+        android:width="1dp"
+        android:color="@color/colorPrimaryDark" />
+
+    <solid android:color="#ffffff" />
+
+
+
+    <!--- handle padding-->
+    <padding
+        android:left="2dp"
+        android:right="2dp"
+        android:top="2dp" />
+
+    <!--- Set corner radius -->
+    <corners android:radius="5dp" />
+</shape>

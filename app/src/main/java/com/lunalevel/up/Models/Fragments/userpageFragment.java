@@ -1,9 +1,11 @@
 package com.lunalevel.up.Models.Fragments;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,11 +15,17 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.UserProfileChangeRequest;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 import com.lunalevel.up.Activities.MainLoginActivity;
 import com.lunalevel.up.R;
 
 
 public class userpageFragment extends Fragment {
+
+
+    FirebaseStorage data=FirebaseStorage.getInstance();
+
 
     @Nullable
     @Override
@@ -27,9 +35,15 @@ public class userpageFragment extends Fragment {
         if(FirebaseAuth.getInstance().getCurrentUser().getDisplayName() != null)
             ((TextView) userpage.findViewById(R.id.fragment_userpage_name_view)).setText(FirebaseAuth.getInstance().getCurrentUser().getDisplayName());
         else
-            ((TextView) userpage.findViewById(R.id.fragment_userpage_name_view)).setText(R.string.erro_nouname);
+            ((TextView) userpage.findViewById(R.id.fragment_userpage_name_view)).setText(R.string.error_nouname);
 
-        ((ImageView) userpage.findViewById(R.id.fragement_userpage_avatar_display)).setImageURI(FirebaseAuth.getInstance().getCurrentUser().getPhotoUrl());
+        //retrieve picture if it exists if not, retrieve default;
+        StorageReference userData=data.getReference("Service/Users/Profiles/"+FirebaseAuth.getInstance().getCurrentUser().getUid());
+
+        System.out.println(userData.getPath()  + " <-- path " + userData.getParent());
+
+
+        //((ImageView) userpage.findViewById(R.id.fragement_userpage_avatar_display)).setImageURI();
 
 
 
@@ -37,7 +51,15 @@ public class userpageFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 FirebaseAuth auth=FirebaseAuth.getInstance();
-                Toast.makeText(userpageFragment.this.getContext(),"Current user-> "+ auth.getCurrentUser().getUid(),Toast.LENGTH_LONG).show();
+
+                Toast userToast=Toast.makeText(userpageFragment.this.getContext(),"Current user-> "+ auth.getCurrentUser().getUid(),Toast.LENGTH_LONG);
+                View userToastView=userToast.getView();
+                userToastView.setBackground(ContextCompat.getDrawable(userpageFragment.this.getContext(),R.drawable.rounded_corner));
+                userToastView.findViewById(android.R.id.message).setBackgroundColor(Color.BLACK);
+                userToast.show();
+
+
+
                 auth.signOut();
                 Intent resetApp=new Intent(userpageFragment.this.getContext(), MainLoginActivity.class);
                 startActivity(resetApp);
